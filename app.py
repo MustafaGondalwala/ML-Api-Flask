@@ -1,14 +1,6 @@
 
 from flask import Flask,render_template,request
-import nltk
-from nltk.tokenize import word_tokenize,sent_tokenize
-from nltk.corpus import stopwords
-from nltk import ne_chunk
 import MySQLdb
-import heapq
-import json
-import re
-import pandas as pd
 
 from scrape import harvard_scrape as h_scrape
 from scrape import techcrunch_scrape as t_scrape
