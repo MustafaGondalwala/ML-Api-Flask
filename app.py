@@ -10,10 +10,13 @@ from scrape import startup_scrape as s_scrape
 import datetime
 from datetime import datetime as current_time
 from flask import jsonify
+from flask_cors import CORS, cross_origin
 
 
 
 app = Flask(__name__)
+cors = CORS(app)
+
 @app.route("/<page_type>")
 def hello(page_type="all"):
     return render_template('home.html')
